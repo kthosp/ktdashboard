@@ -1,6 +1,16 @@
 import React, { Component } from 'react';
+//axios get API
 import axios from 'axios';
-import { Card, CardHeader, CardBody, Row, Col, CardTitle ,CardFooter } from 'reactstrap';
+// reactstrap components
+import { 
+    Card, 
+    //CardHeader, 
+    CardBody, 
+    Row, 
+    Col, 
+    CardTitle ,
+    CardFooter 
+} from 'reactstrap';
 
 class Covid19 extends Component {
     constructor(props) {
@@ -27,7 +37,7 @@ class Covid19 extends Component {
         return (
             <div className="content">
                 <Row>
-                    {/* CARD1 */}
+                    
                     <Col lg="3" md="6" sm="6">
                         <Card className="card-stats">
                             <CardBody>
@@ -54,7 +64,7 @@ class Covid19 extends Component {
                         </Card>
                     </Col>
 
-                    {/* CARD2 */}
+                    
                     <Col lg="3" md="6" sm="6">
                         <Card className="card-stats">
                             <CardBody>
@@ -81,7 +91,7 @@ class Covid19 extends Component {
                         </Card>
                     </Col>
 
-                    {/* CARD3 */}
+                    
                     <Col lg="3" md="6" sm="6">
                         <Card className="card-stats">
                             <CardBody>
@@ -108,19 +118,19 @@ class Covid19 extends Component {
                         </Card>
                     </Col>
 
-                    {/* CARD4 */}
+                    
                     <Col lg="3" md="6" sm="6">
                         <Card className="card-stats">
                             <CardBody>
                                 <Row>
                                     <Col md="4" xs="5">
-                                        <div className="icon-big text-center">
-                                            <i className="fas fa-procedures"></i>
+                                        <div className="icon-big text-center icon-gray">
+                                            <i className="fas fa-procedures text-gray"></i>
                                         </div>
                                     </Col>
                                     <Col md="8" xs="7">
                                         <div className="numbers">
-                                            <p className="card-category">เสียชีวิต</p>
+                                            <p className="card-category text-gray">เสียชีวิต</p>
                                             <CardTitle tag="p">{itemsCovid.Deaths}</CardTitle>
                                         </div>
                                     </Col> 
@@ -129,57 +139,21 @@ class Covid19 extends Component {
                             <CardFooter>
                                 <hr/>
                                 <div className="stats">
-                                    <i class="nc-icon nc-alert-circle-i"> เพิมขึ้น ({itemsCovid.NewDeaths} คน)</i>
+                                    <i class="nc-icon nc-alert-circle-i text-gray"> เพิมขึ้น ({itemsCovid.NewDeaths} คน)</i>
                                 </div>
                             </CardFooter>
                         </Card>
                     </Col>
                     
-                </Row>                
+                </Row>  
+                UpdateDate : {itemsCovid.UpdateDate} <br />
+                Source : {itemsCovid.Source} <br />
+                DevBy : {itemsCovid.DevBy} <br />
+                SeverBy : {itemsCovid.SeverBy}
+                              
             </div>            
           )
     }
 }
 
 export default Covid19;
-
-
-// class Covid19 extends Component {
-//     constructor(props){
-//         super(props);
-//         this.state={
-//             users: []
-//         };
-//     }
-
-//     componentDidMount(){
-//     const url = `${API_URL}/users/`;
-//     axios.get(url).then(response => response.data)
-//     .then((data) => {
-//       this.setState({ users: data })
-//       console.log(this.state.users)
-//      })
-//     }
-
-//     render() {
-//         return (
-//             <div className="content">
-//                <div className="col-xs-8">
-//                     <h1>React Axios Example</h1>
-//                     {this.state.users.map((user) => (
-//                     <div className="card">
-//                         <div className="card-body">
-//                             <h5 className="card-title">{user.name}</h5>
-//                             <h6 className="card-subtitle mb-2 text-muted">
-//                             {user.email}             
-//                             </h6>
-//                         </div>
-//                     </div>
-//                     ))}
-//                 </div>
-//             </div>            
-//           )
-//     }
-// }
-
-// export default Covid19;

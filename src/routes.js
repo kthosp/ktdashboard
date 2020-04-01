@@ -1,11 +1,12 @@
 import Dashboard from "views/Dashboard.jsx";
-import Notifications from "views/Notifications.jsx";
-import Icons from "views/Icons.jsx";
-import Typography from "views/Typography.jsx";
-import TableList from "views/Tables.jsx";
+// import Notifications from "views/Notifications.jsx";
+// import Icons from "views/Icons.jsx";
+// import Typography from "views/Typography.jsx";
+// import TableList from "views/Tables.jsx";
 //import Maps from "views/Map.jsx";
-import UserPage from "views/User.jsx";
+// import UserPage from "views/User.jsx";
 import LeafletMaps from "views/LeafletMap";
+import Covid19 from "views/Covid19";
 //import UpgradeToPro from "views/Upgrade.jsx";
 //URL LOGO อยู่ใน Sidebar.jsx
 var routes = [
@@ -21,6 +22,13 @@ var routes = [
     name: "Klongthom Maps",
     icon: "nc-icon nc-pin-3",
     component: LeafletMaps,
+    layout: "/admin"
+  },
+  {
+    path: "/Covid19",
+    name: "Covid19 Situation",
+    icon: "nc-icon nc-sound-wave",
+    component: Covid19,
     layout: "/admin"
   },
   // {

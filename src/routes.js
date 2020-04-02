@@ -5,8 +5,9 @@ import Dashboard from "views/Dashboard.jsx";
 // import TableList from "views/Tables.jsx";
 //import Maps from "views/Map.jsx";
 // import UserPage from "views/User.jsx";
-import LeafletMaps from "views/LeafletMap";
-import Covid19 from "views/Covid19";
+import LeafletMaps from "views/LeafletMap.jsx";
+import Covid19 from "views/Covid19.jsx";
+import Covid19Krabi from "views/Covid19Krabi.jsx";
 //import UpgradeToPro from "views/Upgrade.jsx";
 //URL LOGO อยู่ใน Sidebar.jsx
 var routes = [
@@ -25,10 +26,17 @@ var routes = [
     layout: "/admin"
   },
   {
-    path: "/Covid19",
+    path: "/covid19",
     name: "Covid19 Situation",
     icon: "nc-icon nc-sound-wave",
     component: Covid19,
+    layout: "/admin"
+  },
+  {
+    path: "/covid19Krabi",
+    name: "Covid19 Krabi",
+    icon: "nc-icon nc-single-02",
+    component: Covid19Krabi,
     layout: "/admin"
   },
   // {
@@ -75,7 +83,7 @@ var routes = [
   // },
   {
     pro: true,
-    path: "/dashboard",
+    path: "/KTAmin",
     name: "KTAmin",
     icon: "nc-icon nc-spaceship",
     component: Dashboard,

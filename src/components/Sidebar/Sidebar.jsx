@@ -52,8 +52,9 @@ class Sidebar extends React.Component {
           <a
             href="/"
             className="simple-text logo-normal"
+            style = { {fontSize : 14}}
           >
-            KTHosp
+            Klongthom Hospital
           </a>
         </div>
         <div className="sidebar-wrapper" ref={this.sidebar}>

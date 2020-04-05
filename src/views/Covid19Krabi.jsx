@@ -63,8 +63,7 @@ class Covid19Krabi extends Component {
 
       return (
           <div className="content"> 
-            <p>อ้างอิงจาก : <a href={allData.Source}  rel="noopener noreferrer" target ="_blank"> {allData.Source}</a></p>
-                
+            <p>อ้างอิงจาก : <a href={allData.Source}  rel="noopener noreferrer" target ="_blank"> {allData.Source}</a></p>                
                 <DataTable
                   title="Covid19 Krabi"
                   columns={columns} //import comlums มาจากข้างบนนะ

@@ -24,5 +24,10 @@ export default [
         name : 'อายุ',
         selector : 'Age',
         sortable : true
-      }      
+      },
+      {
+        name : 'ยืนยันเมื่อ',
+        selector : 'ConfirmDate',
+        sortable : true
+      }       
 ];

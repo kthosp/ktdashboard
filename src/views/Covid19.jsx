@@ -11,6 +11,7 @@ import {
     CardTitle ,
     CardFooter 
 } from 'reactstrap';
+import Covid19Krabi from './Covid19Krabi.jsx';
 
 class Covid19 extends Component {
     constructor(props) {
@@ -146,11 +147,14 @@ class Covid19 extends Component {
                     </Col>
                     
                 </Row>  
-                UpdateDate : {itemsCovid.UpdateDate} <br />
-                Source : {itemsCovid.Source} <br />
-                DevBy : {itemsCovid.DevBy} <br />
-                SeverBy : {itemsCovid.SeverBy}
-                              
+                
+                                   
+                {/* Covid19Krabi     */}
+                <Row>
+                    <Col lg="12" md="12" sm="12">
+                        <Covid19Krabi />
+                    </Col>
+                </Row>                              
             </div>            
           )
     }

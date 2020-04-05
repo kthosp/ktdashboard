@@ -12,7 +12,7 @@ import axios from 'axios';
 //     CardTitle ,
 //     CardFooter 
 // } from 'reactstrap';
-import columns from '../components/Covid19KrabiDataColumn'; //Colums Data ที่จะเอาไปแสดงใน Component DataTable
+import columns from '../components/Covid19KrabiDataColumn';//Colums Data ที่จะเอาไปแสดงใน Component DataTable
 
 class Covid19Krabi extends Component { 
 
@@ -65,7 +65,8 @@ class Covid19Krabi extends Component {
 
       return (
           <div className="content"> 
-            <p>อ้างอิงจาก : <a href={allData.Source}  rel="noopener noreferrer" target ="_blank"> {allData.Source}</a></p>                
+            <p>อ้างอิงจาก : <a href={allData.Source}  rel="noopener noreferrer" target ="_blank"> {allData.Source}</a></p>    
+            <p>ข้อมูล ณ วันที่ : {allData.UpdateDate}</p>            
                 <DataTable
                   title={"ผู้ติดเชื้อของจังหวัดกระบี่ จำนวน "+kData.length+" ราย"}
                   columns={columns} //import comlums มาจากข้างบนนะ
@@ -86,6 +87,7 @@ class Covid19Krabi extends Component {
                             
                 {/* {JSON.stringify(allData)} */}
                 <p>อ้างอิงจาก : <a href="https://data.go.th/dataset/covid-19-daily"> https://data.go.th/dataset/covid-19-daily</a></p>
+                <p>ข้อมูล ณ วันที่ : {allData.UpdateDate}</p>
                 <DataTable
                   title="Covid19 Thailand"
                   columns={columns} //import comlums มาจากข้างบนนะ

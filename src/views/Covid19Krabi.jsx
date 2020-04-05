@@ -56,6 +56,8 @@ class Covid19Krabi extends Component {
       // console.log(allData);
       // console.log(nData);
       // console.log(kData);
+      console.log(kData.length);
+      
       //map Example
       // const array1 = [1, 4, 9, 16];
       // const map1 = array1.map(x => x * 2);
@@ -65,7 +67,7 @@ class Covid19Krabi extends Component {
           <div className="content"> 
             <p>อ้างอิงจาก : <a href={allData.Source}  rel="noopener noreferrer" target ="_blank"> {allData.Source}</a></p>                
                 <DataTable
-                  title="Covid19 Krabi"
+                  title={"ผู้ติดเชื้อของจังหวัดกระบี่ จำนวน "+kData.length+" ราย"}
                   columns={columns} //import comlums มาจากข้างบนนะ
                   data={kData} // State kData
                   pagination = {true}

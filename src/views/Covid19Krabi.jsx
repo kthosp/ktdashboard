@@ -19,14 +19,20 @@ class Covid19Krabi extends Component {
   constructor(props) {
       super(props);
       this.state = {
-        allData: [],          
+        allData: [] ,
+        nData : [] , 
+        kData :[]       
       }
     }
 
     componentDidMount() {
       const api = 'https://covid19.th-stat.com/api/open/cases';
       axios.get(api,{responseType: 'json'}).then(response => {
-          this.setState({ allData: response.data}); //setState ใส่ข้อมูลจากAPIเข้าไป
+          this.setState({ 
+            allData: response.data ,
+            nData : response.data.Data.map(key => [key.ProvinceEn,key.District]),//ตัวอย่างการใช้ map แสดงข้อมูล
+            kData : response.data.Data.filter(Data => Data.ProvinceEn==="Krabi")//ตัวอย่างการใช้ filter ข้อมูล ที่ fetch มาจากAPI
+          }); //setState ใส่ข้อมูลจากAPIเข้าไป
         // this.setState({ krabiCovid19: response.data.Data[0].Province});
         // console.log(response.data.Data[0].Province);          
         })
@@ -37,85 +43,68 @@ class Covid19Krabi extends Component {
     
 
   render() {         
-      const { allData } = this.state; //ประกาศด้วยว่าเป็นState จึงจะเรียกใช้Stateได้
+      const { allData ,
+              // nData , 
+              kData
+            } = this.state; //ประกาศด้วยว่าเป็นState จึงจะเรียกใช้Stateได้
 
-      if (!this.state.allData) {// เขียนIf ดักก่อน ถ้าไม่มีข้อมูลให้แสดงเป็นLoading
+      if (!this.state.allData || !this.state.kData) {// เขียนIf ดักก่อน ถ้าไม่มีข้อมูลให้แสดงเป็นLoading
         return <div className="content">
                   <span>Loading...</span>
               </div>
-      }
-      // const keyKrabiCovid19 = allData.Data//.map(n => [n.No]) 
-      // console.log(keyKrabiCovid19); 
-      console.log(allData.Data);
-
+      }     
+      // console.log(allData);
+      // console.log(nData);
+      // console.log(kData);
       //map Example
       // const array1 = [1, 4, 9, 16];
       // const map1 = array1.map(x => x * 2);
       // console.log(map1);
 
       return (
-          <div className="content">          
-
-            <hr />
-            UpdateDate : {allData.UpdateDate} <br />
-            Source : {allData.Source} <br />
-            DevBy : {allData.DevBy} <br />
-            SeverBy : {allData.SeverBy}
-            <hr />
-            {/* {JSON.stringify(allData)} */}
-            <DataTable
-              title="Covid19 KRABI"
-              columns={columns} //import comlums มาจากข้างบนนะ
-              data={allData.Data} //เลือก object Data ในjson API
-              pagination={true}
-              // conditionalRowStyles={conditionalRowStyles}
-            />
+          <div className="content"> 
+            <p>อ้างอิงจาก : <a href={allData.Source}  rel="noopener noreferrer" target ="_blank"> {allData.Source}</a></p>
+                
+                <DataTable
+                  title="Covid19 Krabi"
+                  columns={columns} //import comlums มาจากข้างบนนะ
+                  data={kData} // State kData
+                  pagination = {true}
+                  paginationPerPage = {15}
+                  paginationComponentOptions={{                
+                    rowsPerPageText: 'จำนวนข้อมูลต่อ หน้า' , 
+                    rangeSeparatorText: 'จากทั้งหมด'
+                  }}
+                  //conditionalRowStyles={conditionalRowStyles}
+                /> <br />
+                UpdateDate : {allData.UpdateDate} <br />
+                Source : {allData.Source} <br />
+                DevBy : {allData.DevBy} <br />
+                SeverBy : {allData.SeverBy}
+                <hr />
+                            
+                {/* {JSON.stringify(allData)} */}
+                <p>อ้างอิงจาก : <a href="https://data.go.th/dataset/covid-19-daily"> https://data.go.th/dataset/covid-19-daily</a></p>
+                <DataTable
+                  title="Covid19 Thailand"
+                  columns={columns} //import comlums มาจากข้างบนนะ
+                  data={allData.Data} //เลือก object Data ในjson API
+                  pagination = {true}
+                  paginationPerPage = {50}
+                  paginationRowsPerPageOptions = {[10, 20, 30 , 40 , 50 ,100]}
+                  paginationComponentOptions={{                
+                    rowsPerPageText: 'จำนวนข้อมูลต่อ หน้า' , 
+                    rangeSeparatorText: 'จากทั้งหมด'
+                  }}
+                  // conditionalRowStyles={conditionalRowStyles}
+                /><br />
+                UpdateDate : {allData.UpdateDate} <br />
+                Source : {allData.Source} <br />
+                DevBy : {allData.DevBy} <br />
+                SeverBy : {allData.SeverBy}
+                <hr />
           </div>
       );
   }
 }
-
-
-
-// class Covid19Krabi extends Component {
-//     constructor(props) {
-//         super(props);
-//         this.state = {
-//           krabiCovid19: [],          
-//         }
-//       }
-//       componentDidMount() {
-//         axios.get('https://covid19.th-stat.com/api/open/cases' ,{
-//             responseType: 'json'
-//         }).then(response => {
-//           this.setState({ krabiCovid19: response.data});
-//         // this.setState({ krabiCovid19: response.data.Data[0].Province});
-//         // console.log(response.data.Data[0].Province);          
-//         })
-//         .catch(error => {
-//           console.log(error);
-//         });
-//       }
-//     render() {
-//         const { krabiCovid19 } = this.state;        
-//         // if (!this.state.krabiCovid19.Data) {
-//         //     return <span>Loading...</span>;
-//         // }
-//         return (
-//             <div className="content">
-//                 {/* {krabiCovid19.Data} */}
-//                 {/* {this.state.krabiCovid19.Data[1].Province} */}
-//                 <hr />
-//                 <p>LastData : {krabiCovid19.LastData}</p>
-//                 <p>Source : {krabiCovid19.Source}</p>
-//                 <p>DevBy : {krabiCovid19.DevBy}</p>
-//                 <p>SeverBy : {krabiCovid19.SeverBy}</p>
-//                 <hr /> 
-//                 <p>{JSON.stringify(krabiCovid19.Data)}</p>              
-//             </div>
-//         );
-//     }
-// }
-
-
 export default Covid19Krabi;

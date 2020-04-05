@@ -1,28 +1,28 @@
 //Colums Data ที่จะเอาไปแสดงใน Component DataTable
 export default [
     {
-        name : 'Province',
+        name : 'จังหวัด',
         selector : 'Province',
         sortable : true
       },
       {
-        name : 'District',
+        name : 'อำเภอ',
         selector : 'District',
         sortable : true
       },
       {
-        name : 'Gender',
+        name : 'เพศ',
         selector : 'Gender',
         sortable : true
       },
       {
-        name : 'Nation',
+        name : 'สัญชาติ',
         selector : 'Nation',
         sortable : true
       },
       {
-        name : 'Age',
+        name : 'อายุ',
         selector : 'Age',
         sortable : true
-      }
+      }      
 ];

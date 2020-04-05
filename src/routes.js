@@ -11,11 +11,18 @@ import Covid19 from "views/Covid19.jsx";
 //import UpgradeToPro from "views/Upgrade.jsx";
 //URL LOGO อยู่ใน Sidebar.jsx
 var routes = [
+  // {
+  //   path: "/dashboard",
+  //   name: "Dashboard",
+  //   icon: "nc-icon nc-bank",
+  //   component: Dashboard,
+  //   layout: "/admin"
+  // },
   {
-    path: "/dashboard",
-    name: "Dashboard",
-    icon: "nc-icon nc-bank",
-    component: Dashboard,
+    path: "/covid19",
+    name: "Covid19 Situation",
+    icon: "nc-icon nc-sound-wave",
+    component: Covid19,
     layout: "/admin"
   },
   {
@@ -23,13 +30,6 @@ var routes = [
     name: "Klongthom Maps",
     icon: "nc-icon nc-pin-3",
     component: LeafletMaps,
-    layout: "/admin"
-  },
-  {
-    path: "/covid19",
-    name: "Covid19 Situation",
-    icon: "nc-icon nc-sound-wave",
-    component: Covid19,
     layout: "/admin"
   },
   // {

@@ -8,6 +8,7 @@ import Dashboard from "views/Dashboard.jsx";
 import LeafletMaps from "views/LeafletMap.jsx";
 import Covid19 from "views/Covid19.jsx";
 // import Covid19Krabi from "views/Covid19Krabi.jsx";
+import Qrcode from 'views/Qrcode.jsx';
 //import UpgradeToPro from "views/Upgrade.jsx";
 //URL LOGO อยู่ใน Sidebar.jsx
 var routes = [
@@ -30,6 +31,13 @@ var routes = [
     name: "Klongthom Maps",
     icon: "nc-icon nc-pin-3",
     component: LeafletMaps,
+    layout: "/admin"
+  },
+  {
+    path: "/qrcode",
+    name: "QR Code",
+    icon: "nc-icon nc-pin-3",
+    component: Qrcode,
     layout: "/admin"
   },
   // {

@@ -12,7 +12,7 @@ import axios from 'axios';
 //     CardTitle ,
 //     CardFooter 
 // } from 'reactstrap';
-import columns from '../components/Covid19KrabiDataColumn';//Colums Data ที่จะเอาไปแสดงใน Component DataTable
+import columns from '../components/Covid19KrabiDataColumn'; //Colums Data ที่จะเอาไปแสดงใน Component DataTable
 
 class Covid19Krabi extends Component { 
 

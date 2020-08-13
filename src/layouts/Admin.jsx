@@ -16,8 +16,8 @@ class Dashboard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      backgroundColor: "white", //สีMenu Side
-      activeColor: "success" //สีFont ในMenu
+      backgroundColor: "black", //สีMenu Side
+      activeColor: "danger" //สีFont ในMenu
     };
     this.mainPanel = React.createRef();
   }

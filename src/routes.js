@@ -3,7 +3,7 @@ import Dashboard from "views/Dashboard.jsx";
 // import Icons from "views/Icons.jsx";
 // import Typography from "views/Typography.jsx";
 // import TableList from "views/Tables.jsx";
-//import Maps from "views/Map.jsx";
+// import Maps from "views/Map.jsx";
 // import UserPage from "views/User.jsx";
 import LeafletMaps from "views/LeafletMap.jsx";
 import Covid19 from "views/Covid19.jsx";
@@ -12,13 +12,13 @@ import Qrcode from 'views/Qrcode.jsx';
 //import UpgradeToPro from "views/Upgrade.jsx";
 //URL LOGO อยู่ใน Sidebar.jsx
 var routes = [
-  // {
-  //   path: "/dashboard",
-  //   name: "Dashboard",
-  //   icon: "nc-icon nc-bank",
-  //   component: Dashboard,
-  //   layout: "/admin"
-  // },
+  //  {
+  //    path: "/dashboard",
+  //    name: "Dashboard",
+  //    icon: "nc-icon nc-bank",
+  //    component: Dashboard,
+  //    layout: "/admin"
+  //  },
   {
     path: "/covid19",
     name: "Covid19 Situation",

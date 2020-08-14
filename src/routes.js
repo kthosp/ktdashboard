@@ -1,10 +1,10 @@
-import Dashboard from "views/Dashboard.jsx";
+//import Dashboard from "views/Dashboard.jsx";
 // import Notifications from "views/Notifications.jsx";
 // import Icons from "views/Icons.jsx";
 // import Typography from "views/Typography.jsx";
 // import TableList from "views/Tables.jsx";
 // import Maps from "views/Map.jsx";
-// import UserPage from "views/User.jsx";
+import UserPage from "views/User.jsx";
 import LeafletMaps from "views/LeafletMap.jsx";
 import Covid19 from "views/Covid19.jsx";
 // import Covid19Krabi from "views/Covid19Krabi.jsx";
@@ -90,11 +90,11 @@ var routes = [
   //   layout: "/admin"
   // },
   {
-    pro: true,
-    path: "/KTAmin",
-    name: "KTAmin",
+    pro: true,//Bottom menu
+    path: "/KTAdmin",
+    name: "KTAdmin",
     icon: "nc-icon nc-spaceship",
-    component: Dashboard,
+    component: UserPage,
     layout: "/admin"
   }
   // ,

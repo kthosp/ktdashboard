@@ -49,7 +49,7 @@ class LeafletMap extends Component {
                                             attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
                                         >             
                                         </TileLayer>
-                                        { this.state.currentPos && <Marker position={[7.9526603, 99.1545900]} draggable = {true}>
+                                        { this.state.currentPos && <Marker position={this.state.currentPos} draggable = {true}>
                                                                                   
                                             <Popup position={this.state.currentPos}>
                                                 Current location: <pre>{JSON.stringify(this.state.currentPos, null, 2)}</pre>

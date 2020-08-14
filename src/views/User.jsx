@@ -35,15 +35,15 @@ class User extends React.Component {
                       <img
                         alt="..."
                         className="avatar border-gray"
-                        src={require("assets/img/mike.jpg")}
+                        src={require("assets/img/default-avatar.png")}
                       />
-                      <h5 className="title">Chet Faker</h5>
+                      <h5 className="title">Klongthom Hospital Admin</h5>
                     </a>
-                    <p className="description">@chetfaker</p>
+                    <p className="description">@KtAdmin</p>
                   </div>
                   <p className="description text-center">
-                    "I like the way you work it <br />
-                    No diggity <br />I wanna bag it up"
+                    "Administrator <br />
+                    Of <br />Klongthom Hospital"
                   </p>
                 </CardBody>
                 <CardFooter>
@@ -90,7 +90,7 @@ class User extends React.Component {
                           </div>
                         </Col>
                         <Col md="7" xs="7">
-                          DJ Khaled <br />
+                          Member1 <br />
                           <span className="text-muted">
                             <small>Offline</small>
                           </span>
@@ -119,7 +119,7 @@ class User extends React.Component {
                           </div>
                         </Col>
                         <Col md="7" xs="7">
-                          Creative Tim <br />
+                        Member2 <br />
                           <span className="text-success">
                             <small>Available</small>
                           </span>
@@ -148,7 +148,7 @@ class User extends React.Component {
                           </div>
                         </Col>
                         <Col className="col-ms-7" xs="7">
-                          Flume <br />
+                        Member3 <br />
                           <span className="text-danger">
                             <small>Busy</small>
                           </span>
@@ -181,7 +181,7 @@ class User extends React.Component {
                         <FormGroup>
                           <label>Company (disabled)</label>
                           <Input
-                            defaultValue="Creative Code Inc."
+                            defaultValue="Klongthom Hospital"
                             disabled
                             placeholder="Company"
                             type="text"
@@ -192,7 +192,7 @@ class User extends React.Component {
                         <FormGroup>
                           <label>Username</label>
                           <Input
-                            defaultValue="michael23"
+                            defaultValue="AdminUsername"
                             placeholder="Username"
                             type="text"
                           />
@@ -212,7 +212,7 @@ class User extends React.Component {
                         <FormGroup>
                           <label>First Name</label>
                           <Input
-                            defaultValue="Chet"
+                            defaultValue="Ktadmin"
                             placeholder="Company"
                             type="text"
                           />
@@ -222,7 +222,7 @@ class User extends React.Component {
                         <FormGroup>
                           <label>Last Name</label>
                           <Input
-                            defaultValue="Faker"
+                            defaultValue="Klongthom"
                             placeholder="Last Name"
                             type="text"
                           />
@@ -234,7 +234,7 @@ class User extends React.Component {
                         <FormGroup>
                           <label>Address</label>
                           <Input
-                            defaultValue="Melbourne, Australia"
+                            defaultValue="Krabi, Thailand"
                             placeholder="Home Address"
                             type="text"
                           />
@@ -246,7 +246,7 @@ class User extends React.Component {
                         <FormGroup>
                           <label>City</label>
                           <Input
-                            defaultValue="Melbourne"
+                            defaultValue="Krabi"
                             placeholder="City"
                             type="text"
                           />
@@ -256,7 +256,7 @@ class User extends React.Component {
                         <FormGroup>
                           <label>Country</label>
                           <Input
-                            defaultValue="Australia"
+                            defaultValue="Thailand"
                             placeholder="Country"
                             type="text"
                           />
@@ -275,7 +275,7 @@ class User extends React.Component {
                           <label>About Me</label>
                           <Input
                             type="textarea"
-                            defaultValue="Oh so, your weak rhyme You doubt I'll bother, reading into it"
+                            defaultValue="Create for datacenter of hospital"
                           />
                         </FormGroup>
                       </Col>
